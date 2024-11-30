@@ -22,7 +22,7 @@ mkdir %testNs%
 
 echo Creating README
 
-echo # %ns% > README.md
+echo # %repo% > README.md
 echo %desc% >> README.md
 
 echo Setting up solution and projects
