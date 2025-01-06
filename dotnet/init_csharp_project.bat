@@ -51,7 +51,6 @@ dotnet sln add %libNs%
 dotnet sln add %testNs%
 
 echo Initializing git repo
-
 git init
 dotnet new gitignore
 REM prevent the console project from being ignored by removing the "*.app" pattern
@@ -59,6 +58,11 @@ type .gitignore | findstr /V "^\*\.app$" > .gitignore_temp
 del .gitignore
 ren .gitignore_temp .gitignore
 
+echo Formatting
+dotnet new editorconfig
+dotnet format whitespace
+
+echo Committing
 git add .
 git commit -m "init"
 
