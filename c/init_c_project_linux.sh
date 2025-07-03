@@ -82,7 +82,7 @@ $desc" > $projectDir/README.md
 
 year=$(date "+%Y")
 user=$(git config user.name)
-sed -e "s/Copyright.*$/Copyright \(c\) $year $user/" ../LICENSE > $projectDir/LICENSE
+sed -e "s/Copyright.*$/Copyright \(c\) $year $user/" $here/../LICENSE > $projectDir/LICENSE
 
 # Hello world
 
